@@ -1,42 +1,51 @@
 # Sweet Password
-A customizable password component for Android.
+A customizable password component for Android
+
 ![](https://raw.githubusercontent.com/jesusmartinoza/sweet-password/master/screenshots/preview.gif)
 
-### Setup
+## Setup
 Pending for JCenter approval
 
-### Usage
+## Usage
 ```
-    <mx.jesusmartinoza.widget.SweetPassword
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-```
-
-### Available attributes
-```
-    <mx.jesusmartinoza.widget.SweetPassword
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        app:iris_color="#25CCF7"
-        app:eye_color="#6D214F"
-        app:anim_duration="400"
-        app:password_hint="Password" />
+<mx.jesusmartinoza.widget.SweetPassword
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
 ```
 
-### Set interpolator and animation duration
+## Available attributes
+All attributes are optional
+```
+<mx.jesusmartinoza.widget.SweetPassword
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    app:eye_color="#6D214F"
+    app:iris_color="#25CCF7"
+    app:anim_duration="400"
+    app:password_hint="Password" />
+```
+
+| Attribute        | Description | Default | 
+| ------------- |-------------|-------------| 
+| `eye_color` | Sets color border of the eye  | Theme color accent |
+| `iris_color` | Sets iris color  | Theme color accent |
+| `anim_duration` | Time to open/close the eye  | 280ms |
+| `password_hint` | Hint for edit text | _Password_ |
+
+## Set interpolator and animation duration
 By default the interpolator is `DecelerateInterpolator` but you can change by anyone you want
 
 ```
-    SweetPassword sweetPassword = findViewById(R.id.my_sweetpassword);
+SweetPassword sweetPassword = findViewById(R.id.my_sweetpassword);
 
-    sweetPassword.setInterpolator(new BounceInterpolator());
-    sweetPassword.setAnimDuration(700);
+sweetPassword.setInterpolator(new BounceInterpolator());
+sweetPassword.setAnimDuration(700);
 ```
 
-### License
-``
-    The MIT License (MIT)
+## License
+```
+    The MIT License (MIT)
 
     Copyright (c) 2018 Jesús Alberto Martínez Mendoza(@jesusmartinoza)
 
