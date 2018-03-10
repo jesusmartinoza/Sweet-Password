@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="SweetPassword">
+        <attr name="iris_color" format="color" />
+        <attr name="eye_color" format="color" />
+        <attr name="anim_duration" format="integer" />
+        <attr name="password_hint" format="string" />
+    </declare-styleable>
+
+</resources>
