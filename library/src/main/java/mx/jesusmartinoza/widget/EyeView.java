@@ -1,4 +1,4 @@
-package mx.jesusmartinoza.library;
+package mx.jesusmartinoza.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;

@@ -1,4 +1,4 @@
-package mx.jesusmartinoza.library;
+package mx.jesusmartinoza.widget;
 
 import android.content.Context;
 import android.text.InputType;
@@ -9,8 +9,6 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
-
-import mx.jesusmartinoza.sweetpassword.EyeView;
 
 /**
  * Created by jesusmartinoza on 10/03/18.
@@ -64,7 +62,7 @@ public class SweetPassword extends RelativeLayout {
 
     public void toggleShowPassword() {
         if (showing) {
-            editText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+            editText.setInputType(InputType.TYPE_CLASS_TEXT);
         } else {
             editText.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         }

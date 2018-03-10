@@ -1,9 +1,7 @@
-package mx.jesusmartinoza.library;
+package mx.jesusmartinoza.widget;
 
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
-
-import mx.jesusmartinoza.sweetpassword.EyeView;
 
 /**
  * Created by jesusmartinoza on 10/03/18.
@@ -11,7 +9,7 @@ import mx.jesusmartinoza.sweetpassword.EyeView;
 
 public class EyeViewAnimation extends Animation {
 
-    private mx.jesusmartinoza.sweetpassword.EyeView eyeView;
+    private EyeView eyeView;
 
     private boolean eyeOpen;
 

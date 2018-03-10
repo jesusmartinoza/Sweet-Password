@@ -1,4 +1,4 @@
-package mx.jesusmartinoza.library;
+package mx.jesusmartinoza.widget;
 
 import org.junit.Test;
 
