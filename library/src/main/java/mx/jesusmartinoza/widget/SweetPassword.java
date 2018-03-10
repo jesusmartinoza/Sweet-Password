@@ -117,7 +117,16 @@ public class SweetPassword extends RelativeLayout {
 
     /*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=
                         G  E  T  T  E  R  S    &    S  E  T  T  E  R  S
-     =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/    /**
+     =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*/
+    /**
+     * Set animation duration
+     * @param durationMillis
+     */
+    public void setAnimDuration(int durationMillis) {
+        animation.setDuration(durationMillis);
+    }
+
+    /**
      * Set iris color
      * @param color new color
      */

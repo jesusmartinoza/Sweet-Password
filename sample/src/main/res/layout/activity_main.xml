@@ -20,4 +20,12 @@
         app:eye_color="#6D214F"
         app:password_hint="Password" />
 
+    <mx.jesusmartinoza.widget.SweetPassword
+        android:id="@+id/sp_interpolator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:iris_color="#EE5A24"
+        app:eye_color="#F79F1F"
+        app:password_hint="Password" />
+
 </LinearLayout>
