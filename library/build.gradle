@@ -1,15 +1,37 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'sweet-password'
+
+    publishedGroupId = 'mx.jesusmartinoza'
+    libraryName = 'Sweet Password'
+    artifact = 'sweet-password'
+
+    libraryDescription = 'A customizable EditText with a switchable eye which shows or hides the password'
+
+    siteUrl = 'https://github.com/jesusmartinoza/Sweet-Password'
+    gitUrl = 'https://github.com/jesusmartinoza/Sweet-Password.git'
+
+    libraryVersion = '0.1'
+
+    developerId = 'jesusmartinoza'
+    developerName = 'Jesús Alberto Martínez Mendoza'
+    developerEmail = 'jesusmartinoza@gmail.com'
+
+    licenseName = 'MIT'
+    licenseUrl = 'https://opensource.org/licenses/MIT'
+    allLicenses = ["MIT"]
+}
+
 android {
     compileSdkVersion 26
-
-
 
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName "0.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -33,3 +55,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

@@ -29,9 +29,9 @@ public class EyeViewAnimation extends Animation {
     @Override
     protected void applyTransformation(float interpolatedTime, Transformation transformation) {
         if(eyeOpen)
-            eyeView.setEOR(interpolatedTime);
+            eyeView.setECR(interpolatedTime);
         else
-            eyeView.setEOR(1.0f - interpolatedTime);
+            eyeView.setECR(1.0f - interpolatedTime);
 
         eyeView.requestLayout();
     }

@@ -4,7 +4,16 @@ A customizable password component for Android
 ![](https://raw.githubusercontent.com/jesusmartinoza/sweet-password/master/screenshots/preview.gif)
 
 ## Setup
-Pending for JCenter approval
+*Gradle*
+```
+repositories {
+    jCenter()
+}
+
+dependencies {
+    compile 'mx.jesusmartinoza:sweet-password:0.1'
+}
+```
 
 ## Usage
 ```
@@ -26,8 +35,8 @@ All attributes are optional
     app:password_hint="Password" />
 ```
 
-| Attribute        | Description | Default | 
-| ------------- |-------------|-------------| 
+| Attribute        | Description | Default |
+| ------------- |-------------|-------------|
 | `eye_color` | Sets color border of the eye  | Theme color accent |
 | `iris_color` | Sets iris color  | Theme color accent |
 | `anim_duration` | Time to open/close the eye  | 280ms |

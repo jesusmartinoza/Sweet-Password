@@ -94,7 +94,7 @@ public class EyeView extends View {
         canvas.drawPath(lashline, paint);
 
         // Waterline
-        // subtract 2 units in Y axis to overlap paths
+        // subtract 2 units in Y axis to overlap paths init
         waterLine.moveTo(anchorX, canvas.getHeight() / 2 - 2);
         waterLine.cubicTo(canvas.getWidth() / 2 - anchorX,canvas.getHeight() - INITIAL_Y,
                 canvas.getWidth() / 2 + anchorX,
@@ -117,10 +117,10 @@ public class EyeView extends View {
      * Set Eye Closed Ratio.
      * 0.0 - Fully opened eye
      * 1.0 - Closed eye
-     * @param eyeOpenRatio new Open Ratio
+     * @param eyeClosedRatio new Eye Closed Ratio
      */
-    public void setEOR(float eyeOpenRatio) {
-        ECR = eyeOpenRatio;
+    public void setECR(float eyeClosedRatio) {
+        ECR = eyeClosedRatio;
     }
 
     /**
