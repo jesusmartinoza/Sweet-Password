@@ -4,7 +4,7 @@ ext {
     bintrayRepo = 'maven'
     bintrayName = 'sweet-password'
 
-    publishedGroupId = 'mx.jesusmartinoza'
+    publishedGroupId = 'mx.jesusmartinoza.library'
     libraryName = 'Sweet Password'
     artifact = 'sweet-password'
 

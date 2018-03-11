@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    compile 'mx.jesusmartinoza:sweet-password:0.1'
+    compile 'mx.jesusmartinoza.library:sweet-password:0.1'
 }
 ```
 
