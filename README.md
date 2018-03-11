@@ -1,4 +1,8 @@
 # Sweet Password
+[![HitCount](http://hits.dwyl.io/jesusmartinoza/Sweet-Password.svg)](http://hits.dwyl.io/jesusmartinoza/Sweet-Password)
+![API VERSION](https://img.shields.io/badge/Android%20API-16-green.svg)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) 
+
 A customizable password component for Android
 
 ![](https://raw.githubusercontent.com/jesusmartinoza/sweet-password/master/screenshots/preview.gif)
