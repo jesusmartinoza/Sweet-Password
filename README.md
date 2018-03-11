@@ -1,7 +1,7 @@
 # Sweet Password
 [![HitCount](http://hits.dwyl.io/jesusmartinoza/Sweet-Password.svg)](http://hits.dwyl.io/jesusmartinoza/Sweet-Password)
 ![API VERSION](https://img.shields.io/badge/Android%20API-16-green.svg)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/) 
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
 
 A customizable password component for Android
 
@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-    compile 'mx.jesusmartinoza.library:sweet-password:0.1'
+    compile 'mx.jesusmartinoza:sweet-password:0.1'
 }
 ```
 
