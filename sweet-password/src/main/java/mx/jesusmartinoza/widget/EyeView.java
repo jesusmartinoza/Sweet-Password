@@ -19,8 +19,9 @@ public class EyeView extends View {
     private Path waterLine;
 
     // Draw stuff
-    private static final int EYE_HEIGHT = 58;
-    private static final int INITIAL_Y = 25;
+    private float eyeHeight;
+    private float irisRadius;
+    private float initialY;
     private float anchorX; // Anchor for control points of paths
     private float ECR; // Eye Closed Ratio
     private int irisColor;
@@ -57,12 +58,16 @@ public class EyeView extends View {
      * Init component with a closed eye. And set some constant data of {paint}
      */
     private void init(){
+        float dp = getResources().getDisplayMetrics().density;
         paint = new Paint();
         ECR = 1.0f;
-        anchorX = 20;
+        anchorX = 5f * dp;
+        initialY = 8f * dp;
+        eyeHeight = 19f * dp;
+        irisRadius = 4f * dp;
 
         paint.setAntiAlias(true);
-        paint.setStrokeWidth(8);
+        paint.setStrokeWidth(2 * dp);
     }
 
     /**
@@ -88,17 +93,16 @@ public class EyeView extends View {
 
         // Lashline
         lashline.moveTo(anchorX, canvas.getHeight() / 2);
-        lashline.cubicTo(canvas.getWidth() / 2 - anchorX, INITIAL_Y + EYE_HEIGHT * ECR,
+        lashline.cubicTo(canvas.getWidth() / 2 - anchorX, initialY + eyeHeight * ECR,
                 canvas.getWidth() / 2 + anchorX,
-                INITIAL_Y + EYE_HEIGHT * ECR, canvas.getWidth() - anchorX, canvas.getHeight() / 2);
+                initialY + eyeHeight * ECR, canvas.getWidth() - anchorX, canvas.getHeight() / 2);
         canvas.drawPath(lashline, paint);
 
         // Waterline
-        // subtract 2 units in Y axis to overlap paths init
-        waterLine.moveTo(anchorX, canvas.getHeight() / 2 - 2);
-        waterLine.cubicTo(canvas.getWidth() / 2 - anchorX,canvas.getHeight() - INITIAL_Y,
+        waterLine.moveTo(anchorX, canvas.getHeight() / 2);
+        waterLine.cubicTo(canvas.getWidth() / 2 - anchorX,canvas.getHeight() - initialY,
                 canvas.getWidth() / 2 + anchorX,
-                canvas.getHeight() - INITIAL_Y, canvas.getWidth() - anchorX, canvas.getHeight() / 2 - 2);
+                canvas.getHeight() - initialY, canvas.getWidth() - anchorX, canvas.getHeight() / 2);
         canvas.drawPath(waterLine, paint);
 
         // Iris
@@ -106,7 +110,7 @@ public class EyeView extends View {
         if(ECR < 0.5) {
             paint.setColor(irisColor);
             paint.setStyle(Paint.Style.FILL);
-            canvas.drawCircle(canvas.getWidth() / 2, canvas.getHeight() / 2, 10 * (1.0f - ECR), paint);
+            canvas.drawCircle(canvas.getWidth() / 2, canvas.getHeight() / 2, irisRadius * (1.0f - ECR), paint);
         }
     }
 
